@@ -142,7 +142,6 @@ Put a single-color PNG with a transparent background named `MenuIcon.png` next t
 | DPI shows "n/a" | Same causes as above. Try **Refresh** in the menu |
 | Permission stopped working after a rebuild | Remove DPIBar from the Input Monitoring list, add it again, and reopen the app |
 | Mouse not recognized, or wrong max DPI | Add your model to the `knownMax` table at the top of `DPIBar.swift` |
-| App won't open after downloading a built copy | Run `xattr -dr com.apple.quarantine DPIBar.app` |
 | Menu bar shows the mouse symbol, not your logo | Check that `MenuIcon.png` is in `DPIBar.app/Contents/Resources/` |
 
 ## Reporting a problem
