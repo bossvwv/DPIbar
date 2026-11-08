@@ -1,8 +1,10 @@
 # DPIBar
 
-A small menu bar app for macOS that lets you change the DPI of a Razer mouse, save your own presets, and see live info about the mouse, without installing Razer's software.
+Change the DPI of your Razer mouse from the macOS menu bar. Save your own presets and see live mouse info, without installing Razer's software.
 
-<!-- Add a screenshot of the menu here, e.g. ![DPIBar menu](screenshot.png) -->
+<p align="center">
+  <img src="screenshot.png" alt="DPIBar menu" width="340">
+</p>
 
 ## Features
 
@@ -38,15 +40,14 @@ There's no prebuilt download yet, so you build it from source. It takes about a 
 xcode-select --install
 ```
 
-**2. Put these files in one folder:**
+**2. Get the source:**
 
-```
-DPIBar.swift     the app source
-MenuIcon.png       optional menu bar icon (see "Custom menu bar icon" below)
-build.sh           the build script below
+```bash
+git clone https://github.com/bossvwv/DPIbar.git
+cd DPIbar
 ```
 
-**3. Save this as `build.sh`:**
+**3. Save this as `build.sh`** in that folder (skip if the repo already contains a `build.sh`):
 
 ```bash
 #!/bin/bash
@@ -91,7 +92,7 @@ codesign --force --deep --sign - "$APP"
 echo "Built $APP"
 ```
 
-Change `com.example.dpibar` to your own identifier (for example `com.yourname.dpibar`) if you publish your own build.
+If you publish your own build, change `com.example.dpibar` to your own identifier (for example `com.yourname.dpibar`).
 
 **4. Build and run:**
 
@@ -158,4 +159,4 @@ DPIBar is an unofficial, community tool. It is not affiliated with, endorsed by,
 
 ## License
 
-MIT. See the `LICENSE` file.
+MIT. See the [LICENSE](LICENSE) file.
